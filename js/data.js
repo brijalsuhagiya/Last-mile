@@ -1,0 +1,4 @@
+export const destinations=['City Light','Vesu','Adajan','Athwa Gate'];
+export const rides=[{id:'shared',name:'Shared cab',eta:'5 min',seats:'1 seat left',price:147,old:289,detour:'Max +7 min',featured:true},{id:'private',name:'Private cab',eta:'3 min',seats:'Your own ride',price:309,detour:'Direct route'},{id:'auto',name:'Auto',eta:'8 min',seats:'Up to 3 people',price:184,detour:'Direct route'}];
+export const trip={from:'Surat Railway Station · Exit Gate 1',to:'City Light, Surat',distance:'7.8 km',duration:'26 min',driver:{name:'Divya Patel',rating:'4.9',rides:'1,284 rides',car:'White Maruti Suzuki Dzire',plate:'GJ 05 RX 4812'},traveller:{name:'Meera S.',rating:'4.8',note:'Joining at pickup'},pin:'7284',pickup:'Zone A2',fare:147};
+export const defaults={phone:'',destination:'City Light',preference:'Women only',theme:'light',step:'welcome',rated:0,demoVisible:true};
