@@ -1,0 +1,1 @@
+import{store}from'./store.js';import{initRouter}from'./router.js';import{screens}from'./screens.js';const phone=document.querySelector('.phone'),demo=document.querySelector('#demo');phone.dataset.theme=store.get().theme;demo.hidden=!store.get().demoVisible;demo.querySelector('button').onclick=()=>{demo.hidden=true;store.set({demoVisible:false})};initRouter(screens);
