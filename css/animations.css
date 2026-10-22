@@ -1,0 +1,22 @@
+@keyframes enter-forward{from{opacity:0;transform:translate3d(42px,0,0) scale(.985)}to{opacity:1;transform:none}}
+@keyframes exit-forward{from{opacity:1;transform:none}to{opacity:0;transform:translate3d(-18px,0,0) scale(.99)}}
+@keyframes enter-back{from{opacity:0;transform:translate3d(-28px,0,0) scale(.99)}to{opacity:1;transform:none}}
+@keyframes exit-back{from{opacity:1;transform:none}to{opacity:0;transform:translate3d(36px,0,0) scale(.985)}}
+@keyframes fade{from{opacity:0;transform:scale(.99)}to{opacity:1;transform:none}}
+@keyframes sheet-up{from{opacity:.2;transform:translateY(100%)}to{opacity:1;transform:none}}
+@keyframes toast-up{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes shimmer{to{background-position:-200% 0}}
+@keyframes success-pop{0%{opacity:0;transform:scale(.55) rotate(-8deg)}65%{transform:scale(1.08) rotate(2deg)}100%{opacity:1;transform:none}}
+@keyframes content-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.route-layer{position:absolute;inset:0;width:100%;will-change:transform,opacity;backface-visibility:hidden}
+.route-enter-forward{z-index:2;animation:enter-forward var(--dur-slow) var(--ease-out) both}
+.route-exit-forward{z-index:1;pointer-events:none;animation:exit-forward var(--dur-slow) var(--ease-out) both}
+.route-enter-back{z-index:2;animation:enter-back var(--dur-slow) var(--ease-out) both}
+.route-exit-back{z-index:1;pointer-events:none;animation:exit-back var(--dur-slow) var(--ease-out) both}
+.route-enter-fade{z-index:2;animation:fade var(--dur-slow) var(--ease-out) both}
+.route-exit-fade{z-index:1;pointer-events:none;animation:fade var(--dur-fast) var(--ease-in) reverse both}
+.screen>.stack>*{animation:content-rise var(--dur-slow) var(--ease-out) both}
+.screen>.stack>*:nth-child(2){animation-delay:35ms}.screen>.stack>*:nth-child(3){animation-delay:70ms}.screen>.stack>*:nth-child(4){animation-delay:105ms}.screen>.stack>*:nth-child(n+5){animation-delay:140ms}
+.backdrop{animation:fade var(--dur-base)}.sheet{animation:sheet-up var(--dur-slow) var(--ease-out)}.toast{animation:toast-up var(--dur-base) var(--ease-out)}.spinner{animation:spin .8s linear infinite}.skeleton{animation:shimmer 1.2s infinite}.success-ring{animation:success-pop 520ms var(--ease-out) both}
+@media(prefers-reduced-motion:reduce){.screen>.stack>*{animation-delay:0ms!important}}
